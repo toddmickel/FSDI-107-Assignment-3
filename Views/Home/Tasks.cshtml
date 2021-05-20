@@ -1,0 +1,83 @@
+@{
+    ViewData["Title"] = "Tasks";
+}
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+    integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+
+<link rel="stylesheet" href="~/css/app.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=KoHo:wght@400;700&family=Roboto:wght@400;700&display=swap"
+    rel="stylesheet">
+
+<section id="details" class="short-details">
+    <h3>Task Information</h3>
+
+    <div class="alert alert-success hide" id="success-save" role="alert">
+        Task saved successfully.
+    </div>
+
+    <div class="alert alert-danger hide" id="error-save" role="alert">
+        Error saving task.
+    </div>
+
+    <div class="control">
+        <label for="title">Title</label>
+        <input type="text" name="title" id="txtTitle" class="form-control">
+    </div>
+
+    <div class="control">
+        <label for="desc">Description</label>
+        <textarea name="desc" rows="4" id="txtDesc" class="form-control"></textarea>
+    </div>
+
+    <div class="control">
+        <label for="important">Important</label>
+        <i class="far fa-star" id="imp-star"></i> <!-- fas = solid fill; far = not filled-->
+    </div>
+
+    <div class="control">
+        <label for="due">Due Date</label>
+        <input type="datetime-local" name="due" id="dateDue" class="form-control">
+    </div>
+
+    <div class="control">
+        <label for="alert">Alert Text</label>
+        <select name="alert" id="selAlert" class="form-control">
+            <option value="1">Don't forget to:</option>
+            <option value="2">Stop:</option>
+            <option value="3">Start:</option>
+            <option value="4">Get more coffee and then:</option>
+        </select>
+    </div>
+
+    <div class="control">
+        <label for="location">Location</label>
+        <input type="text" name="location" id="txtLocation" class="form-control">
+    </div>
+
+    <div class="alert alert-danger hide" role="alert" id="title-error">
+        <b>Error:</b> A title must be entered.
+    </div>
+
+    <div class="alert alert-danger hide" role="alert" id="date-error">
+        <b>Error:</b> A date must be entered.
+    </div>
+
+    <div class="control">
+        <button class="btn btn-dark" id="save-btn">Save Task</button>
+    </div>
+
+</section>
+
+<section id="list">
+    <h3>Your Pending Tasks</h3>
+
+    <button class="btn btn-dark btn-sm" id="details-btn">Show/Hide Details</button>
+    <div id="tasksContainer" class="task-list">
+
+    </div>
+</section>
+
+<script src="~/js/class.js"></script>
+<script src="~/js/app.js"></script>

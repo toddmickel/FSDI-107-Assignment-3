@@ -1,0 +1,125 @@
+main {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: aqua;
+    background-image: radial-gradient(circle, darkblue, aqua);
+    gap: 1rem;
+    font-family: 'KoHo', sans-serif;
+}
+
+.container-fluid {
+    padding: 1rem 0 30rem;
+}
+
+#imp-star {
+    margin-top: .7rem;
+}
+
+#details {
+    flex: 1;
+    background-color: rgb(155, 194, 207);
+    padding:.5rem;
+    border: 2px solid darkslateblue;
+    border-radius: 15px;
+    margin-left: 1rem;
+}
+
+.short-details {
+    height: 35rem;
+}
+
+.tall-details {
+    height: 51rem;
+}
+
+.tall-details {
+    height: 39rem;
+}
+
+#details button {
+    margin-top: 1rem;
+}
+
+#list {
+    flex: 2;
+    margin-left: 1rem;
+}
+
+#imp-star {
+    font-size: 1.5rem;
+}
+
+.displayed-task div {
+    overflow: auto;
+}
+.displayed-task {
+    display: grid;
+    grid-template-columns: 35% 25% 30% 10%;
+    grid-template-rows: 50px 100px;
+    border: 3px solid darkslateblue;
+    border-radius: 15px;
+    margin: 1rem 1rem 1rem 0;
+    background-color: rgb(155, 194, 207);
+}
+
+.task-header {
+    padding: .5rem 1rem .5rem 1rem;
+    grid-column: 1 / span 4;
+    border-bottom: 1px solid darkslateblue;
+    font-size: 1.3rem;
+}
+
+.task-detail {
+    padding: .2rem .5rem .2rem .5rem;
+    grid-column: 1;
+
+}
+
+.task-location {
+    padding: .2rem .5rem .2rem .5rem;
+    grid-column: 2;
+    border-left: 1px solid darkslateblue;
+    border-right: 1px solid darkslateblue;
+}
+
+.due-date {
+    padding: .2rem .5rem .2rem .5rem;
+    grid-column: 3;
+    border-right: 1px solid darkslateblue;
+}
+
+.del-btn-cont {
+    margin: auto;
+}
+
+.del-btn-cont button {
+    background-color: rgb(155, 194, 207);
+    border:none;
+}
+
+.del-btn-cont button:hover {
+    background-color: rgb(155, 194, 207);
+    border:none;
+}
+
+.del-btn-cont i:hover {
+    background-color: rgb(155, 194, 207);
+    color:red;
+}
+
+.del-btn-cont i {
+    color: darkslateblue;
+    font-size: 2rem;
+}
+
+.task-header .important {
+    color: darkred;
+}
+
+.alert {
+    margin-top: 1rem;
+}
+
+.hide {
+    display: none;
+}
